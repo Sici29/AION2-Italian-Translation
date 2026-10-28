@@ -1,0 +1,3 @@
+* -text
+THIRD_PARTY_LICENSES/** -diff
+tools/extractor/bundle_data/LICENSE-* -diff

@@ -1,0 +1,5 @@
+blake3
+lz4
+pycryptodome
+pyinstaller
+pillow
