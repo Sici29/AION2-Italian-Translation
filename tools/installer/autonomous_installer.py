@@ -22,7 +22,7 @@ def gui(args):
     artwork=add_header(window,'Traduzione italiana','Installer della patch','installer-art.png')
     if args.gui_smoke:window.withdraw()
     selected=[args.game_dir];frame=ttk.Frame(window,padding=(20,12));frame.pack(fill='both',expand=True)
-    ttk.Label(frame,text='Release 1 · Steam build 26262663 · lingua del gioco: Español').pack(anchor='w',pady=(8,16))
+    ttk.Label(frame,text='Release 1 · Steam build 26429009 · lingua del gioco: Español').pack(anchor='w',pady=(8,16))
     location=tk.StringVar(value='Ricerca dell’installazione Steam…');ttk.Label(frame,textvariable=location,wraplength=610).pack(anchor='w')
     headline=tk.StringVar(value='Controllo della traduzione e del gioco…');action=tk.StringVar(value='Attendi il controllo iniziale.')
     ttk.Separator(frame).pack(fill='x',pady=12)

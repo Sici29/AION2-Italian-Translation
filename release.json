@@ -1,1 +1,24 @@
-{"release":"1.0.0","name":"Release 1","steam_build":"26262663","runtime_locale":"es-ES","texts":153297,"new_texts":116,"modified_sources":1060,"removed_source_keys":4,"changed_italian":451,"native_fallback_keys":0,"open_context_questions":1815,"technical_errors":0,"human_review_complete":false,"runtime_verified":false,"private_online_updated":false}
+{
+  "release": "1.0.1",
+  "name": "Release 1.0.1",
+  "steam_build": "26429009",
+  "runtime_locale": "es-ES",
+  "texts": 153419,
+  "new_texts": 125,
+  "modified_sources": 4134,
+  "removed_source_keys": 3,
+  "changed_italian": 809,
+  "native_fallback_keys": 0,
+  "open_context_questions": 1823,
+  "technical_errors": 0,
+  "human_review_complete": false,
+  "runtime_verified": false,
+  "private_online_updated": false,
+  "source_alignment_method": {
+    "full_or_build_delta_review_rows": 1661,
+    "strict_source_editorial_equivalence_rows": 1217,
+    "source_case_whitespace_equivalence_rows": 1381,
+    "all_153419_texts_reread_this_update": false
+  },
+  "previous_release": "1.0.0"
+}

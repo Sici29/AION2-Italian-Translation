@@ -30,8 +30,8 @@ export async function packStandaloneExe({stubBytes,datBytes,manifest,receipt,exp
   need(stubSha===expectedStubSha256.toUpperCase(),'Stub SHA mismatch');
   technical(manifest,MANIFEST_KEYS,'manifest');technical(receipt,RECEIPT_KEYS,'receipt');
   need(manifest.payload_sha256===datSha&&receipt.payload_sha256===datSha,'DAT SHA mismatch');
-  need(manifest.steam_build==='26262663'&&manifest.runtime_locale==='es-ES'&&manifest.catalog_total===153297,'Wrong build/slot/count');
-  need(receipt.build_id==='26262663'&&receipt.catalog_total===153297&&receipt.root_read_complete===false&&receipt.account_tokens_in_receipt===false,'Wrong receipt identity/privacy');
+  need(manifest.steam_build==='26429009'&&manifest.runtime_locale==='es-ES'&&manifest.catalog_total===153419,'Wrong build/slot/count');
+  need(receipt.build_id==='26429009'&&receipt.catalog_total===153419&&receipt.root_read_complete===false&&receipt.account_tokens_in_receipt===false,'Wrong receipt identity/privacy');
   const ordered=(value,keys)=>Object.fromEntries([...keys].filter(key=>key in value).map(key=>[key,value[key]]));
   const envelope=encoder.encode(JSON.stringify({schema_version:1,kind:ENVELOPE_KIND,dat_base64:base64(dat),manifest:ordered(manifest,MANIFEST_KEYS),receipt:ordered(receipt,RECEIPT_KEYS)}));
   need(envelope.every(b=>b>=32&&b<=126),'Envelope must be ASCII');

@@ -25,7 +25,7 @@ def compile_patch(input_path,output_path,stub_path=None):
   pin=json.loads((folder/'public_resources.json').read_text('utf8'));need(sha(stub)==pin['stub_sha256'],'Stub del generatore corrotto.')
  need(stub[:2]==b'MZ','Stub non valido.');digest=sha(payload)
  manifest={'schema_version':1,'steam_build':cfg['steam_build'],'runtime_locale':'es-ES','catalog_total':len(target),'payload_sha256':digest,'technical_errors':0,'deterministic_encoding':True,'decoded_readback_equal':True,'human_review_complete':False,'runtime_verified':False,'root_read_complete':False}
- receipt={'schema_version':1,'kind':'browser_patch_build_receipt','project_id':cfg['project_id'],'build_id':cfg['steam_build'],'base_patch':'v87','created_at_utc':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),'payload_sha256':digest,'base_package_sha256':cfg['package_sha256'],'private_metadata_sha256':sha(raw),'template_sha256':cfg['template_sha256'],'key_order_sha256':cfg['key_order_sha256'],'versions_sha256':sha(raw),'source_identity_sha256':cfg['source_identity_sha256'],'catalog_total':len(target),'current_context_pending':1815,'technical_errors':0,'deterministic_encoding':True,'decoded_readback_equal':True,'human_review_complete':False,'runtime_verified':False,'root_read_complete':False,'account_tokens_in_receipt':False}
+ receipt={'schema_version':1,'kind':'browser_patch_build_receipt','project_id':cfg['project_id'],'build_id':cfg['steam_build'],'base_patch':'v88','created_at_utc':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),'payload_sha256':digest,'base_package_sha256':cfg['package_sha256'],'private_metadata_sha256':sha(raw),'template_sha256':cfg['template_sha256'],'key_order_sha256':cfg['key_order_sha256'],'versions_sha256':sha(raw),'source_identity_sha256':cfg['source_identity_sha256'],'catalog_total':len(target),'current_context_pending':1823,'technical_errors':0,'deterministic_encoding':True,'decoded_readback_equal':True,'human_review_complete':False,'runtime_verified':False,'root_read_complete':False,'account_tokens_in_receipt':False}
  technical(manifest,MANIFEST_KEYS);technical(receipt,RECEIPT_KEYS)
  envelope=json.dumps({'schema_version':1,'kind':'aion2_autonomous_browser_payload','dat_base64':base64.b64encode(payload).decode('ascii'),'manifest':manifest,'receipt':receipt},separators=(',',':'),ensure_ascii=True).encode('ascii')
  prefix=('A2EXEFOOTERv1___00000001'+f'{len(stub):016X}{len(envelope):016X}{len(payload):016X}'+sha(stub)+sha(envelope)+digest).encode('ascii');need(len(prefix)==264,'Footer errato.')
@@ -49,11 +49,11 @@ def gui():
   name=filedialog.askopenfilename(title='Italiano.json salvato dal laboratorio',filetypes=[('Italiano JSON','*.json *.gz')])
   if name:selected.set(name)
  ttk.Button(frame,text='Scegli italiano.json',command=choose).pack(anchor='w',pady=8)
- status=tk.StringVar(value='Steam build 26262663 · Español');ttk.Label(frame,textvariable=status,wraplength=730).pack(anchor='w',pady=8)
+ status=tk.StringVar(value='Steam build 26429009 · Español');ttk.Label(frame,textvariable=status,wraplength=730).pack(anchor='w',pady=8)
  bar=ttk.Progressbar(frame,mode='indeterminate');bar.pack(fill='x',pady=8)
  def generate():
   if not selected.get():messagebox.showinfo('Seleziona il testo','Scegli prima il JSON italiano.');return
-  out=filedialog.asksaveasfilename(title='Salva il nuovo installer',defaultextension='.exe',initialfile='AION2_Italiano_Revisione_build26262663.exe',filetypes=[('Installer Windows','*.exe')])
+  out=filedialog.asksaveasfilename(title='Salva il nuovo installer',defaultextension='.exe',initialfile='AION2_Italiano_Revisione_build26429009.exe',filetypes=[('Installer Windows','*.exe')])
   if not out:return
   button.configure(state='disabled');bar.start(10);status.set('Controllo testi e generazione installer…');root.protocol('WM_DELETE_WINDOW',lambda:None)
   def work():

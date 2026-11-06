@@ -1,11 +1,11 @@
-# AION 2 — Traduzione italiana · Release 1
+# AION 2 — Traduzione italiana · Release 1.0.1
 
-Traduzione amatoriale gratuita per **AION 2 su Steam, build 26262663**.
-153.297 testi italiani. Lingua da selezionare nel gioco: **Español**.
+Traduzione amatoriale gratuita per **AION 2 su Steam, build 26429009**.
+153.419 testi italiani. Lingua da selezionare nel gioco: **Español**.
 
 ## Scarica e installa
 
-Apri [l’ultima release](https://github.com/Sici29/AION2-Italian-Translation/releases/latest) e scarica **AION2_Italiano_Setup_1.0.0_build26262663.exe**.
+Apri [l’ultima release](https://github.com/Sici29/AION2-Italian-Translation/releases/latest) e scarica **AION2_Italiano_Setup_1.0.1_build26429009.exe**.
 
 1. Chiudi AION 2 e lascia finire gli aggiornamenti Steam.
 2. Apri l’installer. La cartella Steam viene cercata automaticamente; puoi indicarla manualmente.
@@ -16,9 +16,9 @@ Lo stesso installer permette di controllare i file e ripristinare gli originali.
 
 ## Per i revisori
 
-Scarica **AION2_Kit_Revisori_1.0.0_build26262663.zip** ed estrailo in una cartella.
+Scarica **AION2_Kit_Revisori_1.0.1_build26429009.zip** ed estrailo in una cartella.
 Apri `Laboratorio_Offline.html`, carica `Italiano.json`, cerca e modifica i testi, poi scegli **Salva italiano.json**.
-Apri **AION2_Genera_Patch_1.0.0.exe**, seleziona il JSON salvato e genera il nuovo installer. Non occorrono account, server, Python o Node per usare questi due strumenti.
+Apri **AION2_Genera_Patch_1.0.1.exe**, seleziona il JSON salvato e genera il nuovo installer. Non occorrono account, server, Python o Node per usare questi due strumenti.
 Il generatore conserva numero e ordine delle chiavi e controlla tag, segnaposto, numeri e a capo contro la traduzione di riferimento. Una revisione che richiede una variazione tecnica protetta va verificata dai manutentori prima dell’integrazione.
 Per vedere le fonti nel laboratorio offline puoi caricare un `source_catalog.json` estratto dalla tua copia del gioco. Le fonti originali non sono distribuite nel kit.
 
@@ -26,7 +26,7 @@ I sorgenti dell’installer e del generatore sono in `tools/installer`; il testo
 
 ## Verifiche e limiti
 
-La nuova build è stata estratta dagli archivi originali, tradotta e ricontrollata sui testi cambiati. Installazione, rilettura del catalogo, ripristino e download della release hanno verifiche tecniche separate. La revisione umana continua; le questioni senza prove restano aperte. Il gioco non viene avviato automaticamente e questa release non dichiara una verifica completa in gioco.
+La nuova build è stata estratta dagli archivi originali, tradotta e ricontrollata sui testi cambiati. Installazione, rilettura del catalogo, ripristino e download della release hanno verifiche tecniche separate. Sono conservati 1.823 testi con domande di contesto ancora aperte. La revisione umana continua; le questioni senza prove restano aperte. Il gioco non viene avviato automaticamente e questa release non dichiara una verifica completa in gioco.
 Il laboratorio privato online è attualmente sospeso: questa distribuzione funziona in locale e non sostituisce la sua cronologia.
 
 ## Ringraziamenti
